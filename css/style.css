@@ -86,6 +86,22 @@ body {
   padding: 1rem 2rem;
   background-image: radial-gradient(circle, #2e0135, #000000 70%);
   overflow: hidden;
+  -webkit-animation: 3s move infinite ease-in-out alternate;
+          animation: 3s move infinite ease-in-out alternate;
+}
+
+@-webkit-keyframes move {
+  100% {
+    -webkit-filter: saturate(2);
+            filter: saturate(2);
+  }
+}
+
+@keyframes move {
+  100% {
+    -webkit-filter: saturate(2);
+            filter: saturate(2);
+  }
 }
 
 .wrapper__title-2 {
