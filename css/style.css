@@ -84,8 +84,7 @@ body {
   position: relative;
   height: 100vh;
   padding: 1rem 2rem;
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#18001b), color-stop(70%, #000000));
-  background-image: linear-gradient(to right bottom, #18001b, #000000 70%);
+  background-image: radial-gradient(circle, #2e0135, #000000 70%);
   overflow: hidden;
 }
 
@@ -110,11 +109,18 @@ body {
           transform: translateX(10px);
 }
 
+@media (max-width: 992px) {
+  .wrapper__list a:hover {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
 .wrapper__list a:hover + .wrapper__img {
   display: block;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .wrapper__list a:hover + .wrapper__img {
     display: none;
   }

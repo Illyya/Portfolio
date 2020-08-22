@@ -48,7 +48,7 @@ body {
     position: relative;
     height: 100vh;
     padding: 1rem 2rem;
-    background-image: linear-gradient(to right bottom, #18001b, #000000 70%);
+    background-image: radial-gradient(circle, #2e0135, #000000 70%);
     overflow: hidden;
     &__title-2 {
         margin-bottom: 1rem;
@@ -64,9 +64,14 @@ body {
         a:hover {
             color: #00d6ba;
             transform: translateX(10px);
+            @media (max-width: 992px) {
+                & {
+                    transform: none;
+                }
+            } 
             & + .wrapper__img {
                 display: block;        
-                @media (max-width: 768px) {
+                @media (max-width: 992px) {
                     & {
                         display: none;
                     }
