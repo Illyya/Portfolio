@@ -76,18 +76,14 @@ body {
   color: #ffffff;
 }
 
-.title-2 {
-  font-size: 4rem;
-}
-
 .wrapper {
   position: relative;
   height: 100vh;
   padding: 1rem 2rem;
   background-image: radial-gradient(circle, #2e0135, #000000 70%);
   overflow: hidden;
-  -webkit-animation: 3s move infinite ease-in-out alternate;
-          animation: 3s move infinite ease-in-out alternate;
+  -webkit-animation: 2s move infinite ease-in-out alternate;
+          animation: 2s move infinite ease-in-out alternate;
 }
 
 @-webkit-keyframes move {
@@ -104,10 +100,6 @@ body {
   }
 }
 
-.wrapper__title-2 {
-  margin-bottom: 1rem;
-}
-
 .wrapper__list {
   font-size: 2rem;
   line-height: 1.5;
@@ -121,8 +113,8 @@ body {
 
 .wrapper__list a:hover {
   color: #00d6ba;
-  -webkit-transform: translateX(10px);
-          transform: translateX(10px);
+  -webkit-transform: translateX(5px);
+          transform: translateX(5px);
 }
 
 @media (max-width: 992px) {
