@@ -1,5 +1,3 @@
-@charset "UTF-8";
-/*Обнуление*/
 * {
   padding: 0;
   margin: 0;
@@ -87,7 +85,6 @@ h6 {
   font-weight: 400;
 }
 
-/*--------------------*/
 body {
   font-family: "Montserrat", sans-serif;
   color: #ffffff;
@@ -118,45 +115,87 @@ body {
   }
 }
 
-.wrapper__list {
+.list-of-works {
   font-size: 2rem;
   line-height: 1.5;
 }
 
-.wrapper__list a {
+.list-of-works__li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.list-of-works__link {
   display: inline-block;
+  margin-right: 0.5rem;
   -webkit-transition: .2s ease-out;
   transition: .2s ease-out;
 }
 
-.wrapper__list a:visited {
+.list-of-works__link:visited {
   color: #a7a7a7;
 }
 
-.wrapper__list a:hover {
+.list-of-works__link:hover {
   color: #00d6ba;
-  -webkit-transform: translateX(2px);
-          transform: translateX(2px);
 }
 
 @media (max-width: 992px) {
-  .wrapper__list a:hover {
+  .list-of-works__link:hover {
     -webkit-transform: none;
             transform: none;
   }
 }
 
-.wrapper__list a:hover + .wrapper__img {
+.list-of-works__link:hover + .list-of-works__addition {
+  display: block;
+}
+
+.list-of-works__link:hover ~ .list-of-works__img {
   display: block;
 }
 
 @media (max-width: 992px) {
-  .wrapper__list a:hover + .wrapper__img {
+  .list-of-works__link:hover ~ .list-of-works__img {
     display: none;
   }
 }
 
-.wrapper__img {
+.list-of-works__addition {
+  display: none;
+  font-size: 1rem;
+  color: #0acff1;
+  -webkit-animation: scale-up-center 0.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+          animation: scale-up-center 0.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+.list-of-works__img {
   position: absolute;
   display: none;
   max-width: 100px;
