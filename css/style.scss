@@ -126,6 +126,10 @@ body {
 
       & + .list-of-works__addition {
         display: block;
+
+        @media (max-width: 992px) {
+          display: none;
+        } 
       }
 
       & ~ .list-of-works__img {
